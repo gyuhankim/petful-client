@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cat-column {
+  flex: 0 1 auto;
+}
+
+.dog-column {
+  flex: 0 1 auto;
+}
