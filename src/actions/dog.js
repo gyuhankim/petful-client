@@ -1,8 +1,8 @@
-
+import {API_BASE_URL} from '../config'
 
 export const fetchDog = () => dispatch =>{
     dispatch(fetchingDog())
-    return fetch('/dog').then(res => {
+    return fetch(`${API_BASE_URL}/api/dog`).then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
         }
@@ -53,7 +53,7 @@ export const dogFetchSuccess = dog => ({
 
 export const adoptDog = () => dispatch =>{
     dispatch(adoptingDog())
-    fetch('/dog', {method: 'DELETE'})
+    fetch(`${API_BASE_URL}/api/dog`, {method: 'DELETE'})
         .then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
@@ -68,18 +68,18 @@ export const adoptDog = () => dispatch =>{
 }
 
 export const ADOPTING_DOG = 'ADOPTING_DOG'
-export function adoptingDog(){
+export const adoptingDog = () => ({
     type: ADOPTING_DOG
-}
+})
 
 export const DOG_ADOPTION_ERROR = 'DOG_ADOPTION_ERROR'
-export function dogAdoptionError(err){
+export const dogAdoptionError = (err) => ({
     type: DOG_ADOPTION_ERROR,
     err
-}
+})
 
 export const DOG_ADOPTION_SUCCESS = 'DOG_ADOPTION_SUCCESS'
-export function dogAdoptionSuccess(dog){
+export const dogAdoptionSuccess = (dog) => ({
     type: DOG_ADOPTION_SUCCESS,
     dog
-}
+})

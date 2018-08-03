@@ -1,13 +1,14 @@
-
+import {API_BASE_URL} from '../config'
 
 export const fetchCat = () => dispatch =>{
     dispatch(fetchingCat())
-    return fetch('/cat').then(res => {
+    return fetch(`${API_BASE_URL}/api/cat`).then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
         }
         return res.json();
     }).then(cat => {
+
         dispatch(catFetchSuccess(cat));
     }).catch(err => {
         dispatch(catFetchError(err));
@@ -53,7 +54,7 @@ export const catFetchSuccess = cat => ({
 
 export const adoptCat = () => dispatch =>{
     dispatch(adoptingCat())
-    fetch('/cat', {method: 'DELETE'})
+    fetch(`${API_BASE_URL}/api/cat`, {method: 'DELETE'})
         .then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
@@ -68,18 +69,18 @@ export const adoptCat = () => dispatch =>{
 }
 
 export const ADOPTING_CAT = 'ADOPTING_CAT'
-export function adoptingCat(){
+export const adoptingCat = () => ({
     type: ADOPTING_CAT
-}
+})
 
 export const CAT_ADOPTION_ERROR = 'CAT_ADOPTION_ERROR'
-export function catAdoptionError(err){
+export const catAdoptionError =(err)=>({
     type: CAT_ADOPTION_ERROR,
     err
-}
+})
 
 export const CAT_ADOPTION_SUCCESS = 'CAT_ADOPTION_SUCCESS'
-export function catAdoptionSuccess(cat){
+export const catAdoptionSuccess =(cat)=>({
     type: CAT_ADOPTION_SUCCESS,
     cat
-}
+})
