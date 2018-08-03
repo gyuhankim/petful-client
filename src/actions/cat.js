@@ -1,7 +1,5 @@
 
 
-
-
 export const fetchCat = () => dispatch =>{
     dispatch(fetchingCat())
     fetch('/cat').then(res => {
