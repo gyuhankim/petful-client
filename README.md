@@ -30,4 +30,4 @@ therefore pets may only be adoptable in a first-in, first-out order.
 
 # Screenshots
 
-![alt text](screenshots/ss1.png "Dashboard.js View")
+![alt text](screenshots/ss1.png)
