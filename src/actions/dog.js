@@ -2,7 +2,7 @@
 
 export const fetchDog = () => dispatch =>{
     dispatch(fetchingDog())
-    fetch('/dog').then(res => {
+    return fetch('/dog').then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
         }
@@ -16,9 +16,13 @@ export const fetchDog = () => dispatch =>{
 }
 
 export const FETCHING_DOG = 'FETCHING_DOG'
-export function fetchingDog(){
+// export function fetchingDog(){
+//     type: FETCHING_DOG
+// }
+
+export const fetchingDog = () => ({
     type: FETCHING_DOG
-}
+})
 
 export const DOG_FETCH_ERROR = 'DOG_FETCH_ERROR'
 export function dogFetchError(err){

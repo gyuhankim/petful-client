@@ -2,7 +2,7 @@
 
 export const fetchCat = () => dispatch =>{
     dispatch(fetchingCat())
-    fetch('/cat').then(res => {
+    return fetch('/cat').then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
         }
@@ -16,9 +16,14 @@ export const fetchCat = () => dispatch =>{
 }
 
 export const FETCHING_CAT = 'FETCHING_CAT'
-export function fetchingCat(){
+
+// export function fetchingCat(){
+//     type: FETCHING_CAT
+// }
+
+export const fetchingCat = () => ({
     type: FETCHING_CAT
-}
+})
 
 export const CAT_FETCH_ERROR = 'CAT_FETCH_ERROR'
 export function catFetchError(err){

@@ -1,6 +1,14 @@
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, combineReducers} from 'redux'
 import thunk from 'redux-thunk';
-import reducer from './reducers/index';
+import catReducer from './reducers/cat';
+import dogReducer from './reducers/dog';
 
+const store = createStore(
+  combineReducers({
+    dog: dogReducer,
+    cat: catReducer
+  }),
+  applyMiddleware(thunk)
+)
 
-export default createStore(reducer, applyMiddleware(thunk));
+export default store;
