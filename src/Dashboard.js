@@ -14,11 +14,6 @@ export class Dashboard extends Component {
       this.props.dispatch(fetchDog());
     }
 
-    // componentDidUpdate(prevProps){
-    //     if(this.props.cat !== prevProps.cat){
-
-    //     }
-    // }
 
     onAdoptPet = (type)=>{
        
