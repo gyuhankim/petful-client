@@ -14,7 +14,6 @@ export class Dashboard extends Component {
       this.props.dispatch(fetchDog());
     }
 
-
     onAdoptPet = (type)=>{
        
         if(type === 'cat'){
