@@ -57,12 +57,12 @@ export function adoptingDog(){
 
 export const DOG_ADOPTION_ERROR = 'DOG_ADOPTION_ERROR'
 export function dogAdoptionError(err){
-    type: dogAdoptionError,
+    type: DOG_ADOPTION_ERROR,
     err
 }
 
 export const DOG_ADOPTION_SUCCESS = 'DOG_ADOPTION_SUCCESS'
 export function dogAdoptionSuccess(dog){
-    type: dogAdoptionSuccess,
+    type: DOG_ADOPTION_SUCCESS,
     dog
 }

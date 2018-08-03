@@ -57,12 +57,12 @@ export function adoptingCat(){
 
 export const CAT_ADOPTION_ERROR = 'CAT_ADOPTION_ERROR'
 export function catAdoptionError(err){
-    type: catAdoptionError,
+    type: CAT_ADOPTION_ERROR,
     err
 }
 
 export const CAT_ADOPTION_SUCCESS = 'CAT_ADOPTION_SUCCESS'
 export function catAdoptionSuccess(cat){
-    type: catAdoptionSuccess,
+    type: CAT_ADOPTION_SUCCESS,
     cat
 }
