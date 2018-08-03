@@ -7,10 +7,6 @@
   justify-content: space-evenly;
 }
 
-.cat-column {
-  flex: 0 1 auto;
-}
-
-.dog-column {
+.column {
   flex: 0 1 auto;
 }

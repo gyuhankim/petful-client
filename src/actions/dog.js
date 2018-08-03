@@ -16,6 +16,7 @@ export const fetchDog = () => dispatch =>{
 }
 
 export const FETCHING_DOG = 'FETCHING_DOG'
+
 // export function fetchingDog(){
 //     type: FETCHING_DOG
 // }
@@ -25,16 +26,28 @@ export const fetchingDog = () => ({
 })
 
 export const DOG_FETCH_ERROR = 'DOG_FETCH_ERROR'
-export function dogFetchError(err){
+
+// export function dogFetchError(err){
+//     type: DOG_FETCH_ERROR,
+//     err
+// }
+
+export const dogFetchError = err => ({
     type: DOG_FETCH_ERROR,
     err
-}
+})
 
 export const DOG_FETCH_SUCCESS = 'DOG_FETCH_SUCCESS'
-export function dogFetchSuccess(dog){
+
+// export function dogFetchSuccess(dog){
+//     type: DOG_FETCH_SUCCESS,
+//     dog
+// }
+
+export const dogFetchSuccess = dog => ({
     type: DOG_FETCH_SUCCESS,
     dog
-}
+})
 
 
 

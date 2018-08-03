@@ -26,16 +26,28 @@ export const fetchingCat = () => ({
 })
 
 export const CAT_FETCH_ERROR = 'CAT_FETCH_ERROR'
-export function catFetchError(err){
+
+// export function catFetchError(err){
+//     type: CAT_FETCH_ERROR,
+//     err
+// }
+
+export const catFetchError = err => ({
     type: CAT_FETCH_ERROR,
     err
-}
+})
 
 export const CAT_FETCH_SUCCESS = 'CAT_FETCH_SUCCESS'
-export function catFetchSuccess(cat){
+
+// export function catFetchSuccess(cat){
+//     type: CAT_FETCH_SUCCESS,
+//     cat
+// }
+
+export const catFetchSuccess = cat => ({
     type: CAT_FETCH_SUCCESS,
     cat
-}
+})
 
 
 

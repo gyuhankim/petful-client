@@ -10,7 +10,7 @@ class Section extends Component {
   render() {
  
     return (
-      <header>
+      <header className='column'>
           <h1>{this.props.animalToAdopt.name}</h1>
           <img src={this.props.animalToAdopt.imageURL} alt={this.props.animalToAdopt.imageDescription}></img>
           <main>

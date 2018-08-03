@@ -21,8 +21,8 @@ export class Dashboard extends Component {
   render() {
     return (
         <div className='dashboard'>
-          <Section className='cat-column' animalType='cat' animalToAdopt={this.props.cat} onAdoptPet={this.onAdoptPet}/>
-          <Section className='dog-column' animalType='dog' animalToAdopt={this.props.dog} onAdoptPet={this.onAdoptPet}/>
+          <Section animalType='cat' animalToAdopt={this.props.cat} onAdoptPet={this.onAdoptPet}/>
+          <Section animalType='dog' animalToAdopt={this.props.dog} onAdoptPet={this.onAdoptPet}/>
         </div>
     );
   }
