@@ -12,7 +12,7 @@ class Section extends Component {
     return (
       <header className='column'>
           <h1>{this.props.animalToAdopt.name}</h1>
-          <img src={this.props.animalToAdopt.imageURL} alt={this.props.animalToAdopt.imageDescription}></img>
+          <img className='img-pet' src={this.props.animalToAdopt.imageURL} alt={this.props.animalToAdopt.imageDescription}></img>
           <main>
               <dl>
                   <dt> name </dt> <dd> {this.props.animalToAdopt.name}</dd>

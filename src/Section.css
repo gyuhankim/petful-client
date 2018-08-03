@@ -1,0 +1,8 @@
+.column {
+  flex: 0 1 auto;
+}
+
+.img-pet {
+  flex: 0 1 auto;
+  width: 400px;
+}

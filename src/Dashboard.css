@@ -6,7 +6,3 @@
   display: flex;
   justify-content: space-evenly;
 }
-
-.column {
-  flex: 0 1 auto;
-}
