@@ -6,3 +6,35 @@
   flex: 0 1 auto;
   width: 400px;
 }
+
+dl {
+  border: 3px double #ccc;
+  margin: auto;
+  padding: 0.5em;
+  width: 400px;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+dt::after {
+  content: ":";
+}
+dd {
+  margin: 0 0 0 110px;
+  text-align: left;
+  padding: 0 0 0.5em 0;
+}
+
+@media (max-width: 440px) {
+  .img-pet {
+    width: 90%;
+  }
+  dl {
+    width: 90%
+  }
+}

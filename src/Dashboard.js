@@ -26,10 +26,10 @@ export class Dashboard extends Component {
 
   render() {
     return (
-        <div className='dashboard'>
+        <main className='dashboard'>
           <Section animalType='cat' animalToAdopt={this.props.cat} onAdoptPet={this.onAdoptPet}/>
           <Section animalType='dog' animalToAdopt={this.props.dog} onAdoptPet={this.onAdoptPet}/>
-        </div>
+        </main>
     );
   }
 }

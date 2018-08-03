@@ -25,16 +25,9 @@ therefore pets may only be adoptable in a first-in, first-out order.
 * Dashboard.js => Responsible for rendering Section components
 * Section.js => Responsible for rendering pet image and information from state.
 
+### Server API Consumption
+* Endpoint ```/api/cat``` & ```/api/dog``` to get JSON data of associated cat and dog.
+
 # Screenshots
 
-## 1
-![alt text](screenshots/onboarding.png "Description goes here")
-
-## 2
-![alt text](screenshots/game-list-view.png "Description goes here")
-
-## 3
-![alt text](screenshots/game-list-view-2.png "Description goes here")
-
-## 4
-![alt text](screenshots/favorites-list-view.png "Description goes here")
+![alt text](screenshots/ss1.png "Dashboard.js View")
