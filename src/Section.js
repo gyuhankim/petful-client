@@ -21,7 +21,7 @@ class Section extends Component {
                   <dt> breed </dt> <dd> {this.props.animalToAdopt.breed} </dd>
                   <dt> story </dt> <dd> {this.props.animalToAdopt.story} </dd>
               </dl>
-              <button>
+              <button onClick={()=>{this.props.onAdoptPet(this.props.animalType)}}>
                 Adopt     
               </button>
           </main>

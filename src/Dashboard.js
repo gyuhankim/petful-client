@@ -29,11 +29,16 @@ class Dashboard extends Component {
         }
     }
 
+
+    onAdoptPet(type){
+        console.log('adopting a', type)
+    }
+
   render() {
     return (
         <div>
-          <Section animalType='cat' animalToAdopt={this.state.catToAdopt}/>
-          <Section animalType='dog' animalToAdopt={this.state.dogToAdopt}/>
+          <Section animalType='cat' animalToAdopt={this.state.catToAdopt} onAdoptPet={this.onAdoptPet}/>
+          <Section animalType='dog' animalToAdopt={this.state.dogToAdopt} onAdoptPet={this.onAdoptPet}/>
         </div>
     );
   }
